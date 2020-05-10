@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Menus</h1>
+<h1>Menu di Ngant.in</h1>
 
 <table>
   <thead>
     <tr>
+      <th colspan="1">Gambar</th>
       <th>Nama</th>
       <th>Harga</th>
       <th>Rating</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @menus.each do |menu| %>
       <tr>
+        <td><%= image_tag menu.image.variant(resize_to_fit: [400, 600]) %></td>
         <td><%= menu.nama %></td>
         <td><%= menu.harga %></td>
         <td><%= menu.rating %></td>

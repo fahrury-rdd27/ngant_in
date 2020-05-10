@@ -28,14 +28,13 @@ gem 'faker', '~> 2.11'
 gem 'will_paginate', '~> 3.3'
 gem 'bootstrap-will_paginate', '~> 1.0'
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.10', '>= 1.10.3'
+gem 'ruby-vips', '~> 2.0', '>= 2.0.17'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise', '~> 4.7', '>= 4.7.1'
-
-gem 'paperclip', '~> 6.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
