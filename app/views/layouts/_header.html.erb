@@ -1,0 +1,38 @@
+<div class="navbar navbar-expand-md navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <%= link_to 'Ngant.in', root_path, class: "navbar-brand" %><span class="sr-only">(current)</span>
+    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse navHeaderCollapse">
+      <ul class="nav navbar-nav navbar-left text-center">
+        <li class="">
+          <% if pewarung_signed_in? %>
+            <%= link_to 'New Menu', new_menu_path %>
+          <% end -%>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Developer<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="">facebook</a></li>
+            <li><a href="">google+</a></li>
+            <li><a href="">instagram</a></li>
+          </ul>
+        </li>
+        <% if pewarung_signed_in? %>
+        <li><%= link_to 'Sign out', destroy_pewarung_session_path, method: :delete -%></li>
+        <% else %>        
+        <li><%= link_to 'Sign in', new_pewarung_session_path %></li>
+        <% end %>
+      </ul>
+      <form class="navbar-form navbar-right" role = "Search">
+        <div class="form-inline my-2 my-lg-0">
+          <input type="search" class="form-control mr-sm-2" placeholder="Cari menu favoritmu">
+          <button type="submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>        
+      </form>
+    </div>
+  </div>
+</div>
